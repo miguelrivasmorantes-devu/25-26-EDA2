@@ -1,28 +1,14 @@
     public class QuickSort{
-            public static void ordenar(int[] array, int izquierda, int derecha) {
-            if (izquierda >= derecha) {
-                return;
-            }
-            int indicePivote = particionar(array, izquierda, derecha);
-            System.out.print("Array ");
-            for (int i = izquierda; i <= derecha; i++) {
-                System.out.print(array[i] + " ");
-            }
-            System.out.print(" particionado en los grupos:(izquierda) ");
-            for (int i = izquierda; i < indicePivote; i++) {
-                System.out.print(array[i] + " ");
-            }
-            System.out.print(" Y (derecha) ");
-            for (int i = indicePivote + 1; i <= derecha; i++) {
-                System.out.print(array[i] + " ");
-            }
-            System.out.print(" con el indice en: " + array[indicePivote]);
-
-            System.out.println();
-
-            ordenar(array, izquierda, indicePivote - 1);
-            ordenar(array, indicePivote + 1, derecha);
+    public static void ordenar(int[] array, int izquierda, int derecha) {
+        if (izquierda >= derecha) {
+            return;
         }
+        int indicePivote = particionar(array, izquierda, derecha);
+        imprimirEstado(array, izquierda, derecha, indicePivote);
+
+        ordenar(array, izquierda, indicePivote - 1);
+        ordenar(array, indicePivote + 1, derecha);
+    }
 
     private static int particionar(int[] array, int izquierda, int derecha) {
         int pivote = array[derecha];
@@ -39,5 +25,23 @@
         array[i + 1] = array[derecha];
         array[derecha] = temporal;
         return i + 1;
+    }
+
+    private static void imprimirEstado(int[] array, int izquierda, int derecha, int indicePivote){
+        System.out.print("Array ");
+        for (int i = izquierda; i <= derecha; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.print(" particionado en los grupos:(izquierda) ");
+        for (int i = izquierda; i < indicePivote; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.print(" Y (derecha) ");
+        for (int i = indicePivote + 1; i <= derecha; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.print(" con el indice en: " + array[indicePivote]);
+
+        System.out.println();
     }
 }
