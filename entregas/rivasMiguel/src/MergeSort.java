@@ -48,7 +48,7 @@ public class MergeSort{
                 int medio = izquierda + tamano - 1;
                 int derecha = Math.min(izquierda + 2 * tamano - 1, n - 1);
 
-System.out.print("Array ");
+                System.out.print("Array ");
                 for (int i = izquierda; i <= derecha; i++) {
                     System.out.print(array[i] + " ");
                 }
