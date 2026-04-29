@@ -8,6 +8,7 @@ public class Main {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
+        System.out.println();
 
         Scanner sc = new Scanner(System.in);
         System.out.println();
@@ -19,6 +20,7 @@ public class Main {
         System.out.println("5. Quick Sort");
 
         int opcion = sc.nextInt();
+        System.out.println();
 
         if (opcion == 1) {
             InsertionSort.ordenar(array);
@@ -35,6 +37,7 @@ public class Main {
         }
 
         System.out.println();
+        
         System.out.println("Array luego del ordenamiento:");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
