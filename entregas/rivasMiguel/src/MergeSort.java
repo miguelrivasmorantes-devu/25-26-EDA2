@@ -48,7 +48,7 @@ public class MergeSort{
                 int medio = izquierda + tamano - 1;
                 int derecha = Math.min(izquierda + 2 * tamano - 1, n - 1);
 
-                System.out.print("Array ");
+System.out.print("Array ");
                 for (int i = izquierda; i <= derecha; i++) {
                     System.out.print(array[i] + " ");
                 }
@@ -57,29 +57,27 @@ public class MergeSort{
                     System.out.print(array[i] + " ");
                 }
                 System.out.print(" Y ");
-                for (int i = medio+1; i <= derecha; i++) {
+                for (int i = medio + 1; i <= derecha; i++) {
                     System.out.print(array[i] + " ");
                 }
 
                 System.out.println();
-
-
-                fusionar(array, izquierda, medio, derecha);
-                
 
                 System.out.print("Arrays ");
                 for (int i = izquierda; i <= medio; i++) {
                     System.out.print(array[i] + " ");
                 }
                 System.out.print(" Y ");
-                for (int i = medio+1; i <= derecha; i++) {
+                for (int i = medio + 1; i <= derecha; i++) {
                     System.out.print(array[i] + " ");
                 }
+
+                fusionar(array, izquierda, medio, derecha);
+
                 System.out.print(" fusionados en ");
                 for (int i = izquierda; i <= derecha; i++) {
                     System.out.print(array[i] + " ");
                 }
-
                 System.out.println();
             }
         }
